@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%-- <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="jakarta.tags.core"%>
 <!DOCTYPE html>
@@ -18,31 +18,7 @@
 	crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-<!-- 	<div> -->
-<%-- 		<c:url value="/list" var="listUrl" /> --%>
-<!-- 	</div> -->
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-12 col-md-4 .col-lg-2">
-
-				<div class="d-flex justify-content-between">
-					<h3>목록</h3>
-					<div class="btn btn-primary add-item"><i
-						class="fa-solid fa-plus"></i></div>
-				</div>
-				<div>
-					<c:forEach items="${list }" var="item" varStatus="status">
-						<div class="card">
-							<div id="${status.index }" class="card-body name-item">
-							
-							${item }</div>
-						</div>
-					</c:forEach>
-				</div>
-			</div>
-		</div>
-	</div>
-<%-- 	<div>
+	<div>
 		<c:url value="/add" var="addUrl" />
 	</div>
 	<div class="container">
@@ -65,7 +41,7 @@
 				</div>
 			</div>
 		</div>
-	</div> --%>
+	</div>
 
 
 
@@ -103,8 +79,7 @@
 		</div>
 	</div>
 	
-	
-	<div class="modal fade" id="addModal" tabindex="-1"
+		<div class="modal fade" id="addModal" tabindex="-1"
 		aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -140,7 +115,6 @@
 
 	<script>
 		const myModal = new bootstrap.Modal("#updateModal");	
-		const myModal1 = new bootstrap.Modal("#addModal");	
 	
 		$(".name-item").click(function() {
 			const name = $(this).text().trim();
@@ -169,3 +143,4 @@
 
 
 
+ --%>
